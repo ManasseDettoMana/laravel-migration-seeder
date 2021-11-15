@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\Travel;
 use Faker\Generator as Faker;
-class TravelsTableSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,8 @@ class TravelsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for($i = 0; $i < 10; $i++)
+        
+        for($i = 0; $i < 20; $i++)
         {
             $newTravel = new Travel;
             $newTravel->partenza = $faker->name();
