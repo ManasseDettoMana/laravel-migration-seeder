@@ -12,6 +12,16 @@ class TravelsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        
+        for($i = 0; $i < 10; $i++)
+        {
+            $newTravel = new Travel;
+            $newTravel->partenza = $faker->city();
+            $newTravel->destinazione = $faker->city();
+            $newTravel->data_partenza = $faker->dateTime();
+            $newTravel->data_arrivo = $faker->dateTime();
+            $newTravel->prezzo = $faker->randomNumber(3, true);
+
+            $newTravel->save();
+        }
     }
 }
