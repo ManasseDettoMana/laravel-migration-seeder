@@ -13,9 +13,9 @@ class UsersTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         
-        for($i = 0; $i < 20; $i++)
+        for($i = 0; $i < 50; $i++)
         {
-            $newTravel = new Travel;
+            $newTravel = new Travel();
             $newTravel->partenza = $faker->name();
             $newTravel->destinazione = $faker->name();
             $newTravel->data_partenza = $faker->dateTime();

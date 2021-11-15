@@ -14,7 +14,7 @@ class TravelsTableSeeder extends Seeder
     {
         for($i = 0; $i < 10; $i++)
         {
-            $newTravel = new Travel;
+            $newTravel = new Travel();
             $newTravel->partenza = $faker->name();
             $newTravel->destinazione = $faker->name();
             $newTravel->data_partenza = $faker->dateTime();
